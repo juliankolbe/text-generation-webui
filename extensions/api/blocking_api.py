@@ -73,7 +73,7 @@ def _run_server(port: int, share: bool = False):
 
     if share:
         try:
-            try_start_cloudflared(port, max_attempts=3, on_start=on_start)
+            try_start_cloudflared(port, max_attempts=1, on_start=on_start)
         except Exception:
             pass
     else:
